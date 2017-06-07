@@ -4,6 +4,6 @@
   <% @pictures.each do |pic| %>
 
 <p>Title: <%=pic.title%>, Artist: <%=pic.artist%> </p>
-  <img src="<%=pic.url%>" alt="<%=pic.title%>">
+  <a href="/pictures/<%= pic.id %>"><img src="<%=pic.url%>" alt="<%=pic.title%>"></a>
 
   <% end %>
