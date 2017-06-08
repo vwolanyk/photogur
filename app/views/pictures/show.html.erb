@@ -1,4 +1,4 @@
-<%= link_to("Back to Gallery", "/pictures") %>
+<%= link_to("Back to Gallery", "/pictures") %> | <%= link_to("Edit", "/pictures/#{@picture.id}/edit") %> |
 
 <%= link_to("Add New Picture", "/pictures/new")%>
 <h1><%= @picture.title%></h1>

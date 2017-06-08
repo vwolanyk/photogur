@@ -8,6 +8,7 @@ class PicturesController < ApplicationController
     @picture = Picture.find(params[:id])
   end
 
+# ADDING A NEW PIC
   def new
 
     @picture = Picture.new
@@ -30,6 +31,23 @@ class PicturesController < ApplicationController
 
   end
 
+  # EDITING/UPDATING PIC
+
+  def edit
+    @picture = Picture.find(params[:id])
+  end
+
+  def update
+
+    @picture = Picture.find(params[:id])
+
+    if @picture.update_attributes(picture_params)
+      redirect_to "/pictures/#{@picture.id}"
+
+    else
+      render :edit
+    end
+end
   def picture_params
     {title: params[:picture][:title], artist: params[:picture][:artist], url: params[:picture][:url]}
   end
