@@ -1,4 +1,7 @@
+<%= link_to("Back to Gallery", "/pictures") %>
+
+<%= link_to("Add New Picture", "/pictures/new")%>
 <h1><%= @picture.title%></h1>
 <h3>By <%= @picture.artist%> </h3>
 
-<img src="<%= @picture.url %>" alt="<%= @picture.title %>">
+<%= image_tag(@picture.url) %>
