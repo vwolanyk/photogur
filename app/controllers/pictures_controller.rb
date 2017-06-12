@@ -48,7 +48,22 @@ class PicturesController < ApplicationController
       render :edit
     end
 end
+
+# Delete a picture
+
+def destroy
+
+@picture = Picture.find(params[:id])
+@picture.destroy
+redirect_to "/pictures"
+end
+
+# Used in Multiple methods to add or update specific picture
   def picture_params
     {title: params[:picture][:title], artist: params[:picture][:artist], url: params[:picture][:url]}
   end
+
+
+
+
 end

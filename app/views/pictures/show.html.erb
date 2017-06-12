@@ -1,6 +1,6 @@
-<%= link_to("Back to Gallery", "/pictures") %> | <%= link_to("Edit", "/pictures/#{@picture.id}/edit") %> |
+<%= link_to("Back to Gallery", "/pictures") %> | <%= link_to("Edit", "/pictures/#{@picture.id}/edit") %> | <%= link_to("Delete", "/pictures/#{@picture.id}", method: :delete, data: {confirm: "Are you sure you want to delete this pic?"})%>
 
-<%= link_to("Add New Picture", "/pictures/new")%>
+
 <h1><%= @picture.title%></h1>
 <h3>By <%= @picture.artist%> </h3>
 

@@ -1,6 +1,6 @@
 <h1>Pics(<%= @pictures.length%>)</h1>
 
-<%= link_to("Add New Picture", "/pictures/new")%>
+<%= link_to("Add New Picture", new_picture_path)%>
   <% @pictures.each do |pic| %>
 
 <p>Title: <%=pic.title%>, Artist: <%=pic.artist%> </p>
