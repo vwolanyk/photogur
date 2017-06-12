@@ -1,9 +1,24 @@
-<h1>Pics(<%= @pictures.length%>)</h1>
+<h1>Picture Gallery</h1>
+<h2><em> ( Total: <%= @pictures.length%>)</em></h2>
 
-<%= link_to("Add New Picture", new_picture_path)%>
+<p><%= link_to("Add New Picture", new_picture_path)%>
+</p>
+<div class="gallery-full">
+
+
   <% @pictures.each do |pic| %>
+<div class="gallery">
 
-<p>Title: <%=pic.title%>, Artist: <%=pic.artist%> </p>
-<%= link_to(image_tag(pic.url), "/pictures/#{pic.id}")%>
+  <p><%=pic.title%> </p>
+  <p> Artist: <%=pic.artist%> </p>
 
+<div class="">
+  <%= link_to(image_tag(pic.url), "/pictures/#{pic.id}")%>
+
+</div>
+
+
+
+</div>
   <% end %>
+</div>

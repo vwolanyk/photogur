@@ -2,13 +2,61 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-html{ background-color: black;
-      color: white;
-      max-width: 1200px;
+html {
+        box-sizing: border-box;
+        font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 100%;
+        background-color: black;
+        color: white;
+        text-align: center;
+}
+
+*,
+*::before,
+*::after  {
+            box-sizing: inherit;
+          }
+
+body  { margin: auto;
+        max-width: 1200px;
       }
 
-img   {width: 100%;}
+/*
+  This rule ensure that all images always fit in their container
+   but are never stretched beyond their native resolution
+*/
+img {
+  max-width: 100%;
+
+}
+
+
+/* CLEARFIX - for ensuring floated elements are contained in their parent */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
 
 body  {width: 90%;
         text-align: center;
         margin: auto;}
+
+h1      {font-family: sans-serif;
+          color:red;
+          font-size: 4em;
+          margin-bottom: 0;
+}
+
+.gallery-full {text-align: center;
+                margin:auto;}
+
+.gallery { width: 45%;
+          margin-left:5%;
+
+
+
+  float: left;
+}
